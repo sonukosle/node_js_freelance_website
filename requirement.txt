@@ -1,0 +1,4 @@
+npm init => to create project with nodejs
+packages => express,mongoose,body-parser,
+hbs=> basically we use hbs to templet engin , it use to send data in html.
+
