@@ -1,12 +1,13 @@
 const express = require("express");
 
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
-const hbs = require('hbs')
+const hbs = require("hbs");
 
 const app = express();
 
 const routes = require("./routes/main");
+const Detail = require("./models/Detail");
 
 // app.get('/', (req,res)=>{
 
@@ -24,13 +25,40 @@ app.set("view engine", "hbs");
 app.set("views", "views");
 
 //using partials
-hbs.registerPartials("views/partials")
+hbs.registerPartials("views/partials");
 
-//db connection 
-mongoose.connect("mongodb://localhost/website_freelance",()=>{
-    console.log("db conected");
+//db connection
+mongoose.connect("mongodb://localhost/website_freelance", () => {
+  console.log("db conected");
+
+  // Detail.create({
+  //   brandName: "Info Technical Solution",
+  //   brandIconUrl:
+  //     "https://t4.ftcdn.net/jpg/03/28/54/21/360_F_328542178_YotgB5sGePl9SzsChnn66W4xVMCvC3hb.jpg",
+  //   links: [
+  //     {
+  //       label: "Home",
+  //       url: "/"
+  //     },
+  //     {
+  //     label: "Servicess",
+  //     url: "/services",
+  //     },
+  //     {
+  //     label: "Gallary",
+  //     url: "/gallary",
+  //     },
+  //     {
+  //     label: "About",
+  //     url: "/about",
+  //     },
+  //     {
+  //     label: "Contact Us",
+  //     url: "/contact-us",
+  //     }
+  //   ]
+  // });
 });
-
 
 app.listen(process.env.PORT | 5656, () => {
   console.log("Server started..");
