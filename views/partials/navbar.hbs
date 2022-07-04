@@ -9,14 +9,11 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-{{#each data.links}}
+      {{#each data.links}}
         <li class="nav-item">
-<<<<<<< HEAD
           <a class="nav-link active" aria-current="page" href="{{this.url}}">{{this.label}}</a>
-=======
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
-        <li class="nav-item">
+        {{!-- <li class="nav-item">
           <a class="nav-link" href="#">Link</a>
         </li>       
         <li class="nav-item">
@@ -24,8 +21,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
->>>>>>> d04df3ab37490a8906003bdb8938a5004bcc4fcf
-        </li>
+        </li> --}}
        {{/each}}
         
       </ul>
