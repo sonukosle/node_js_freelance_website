@@ -8,7 +8,7 @@ const app = express();
 
 const routes = require("./routes/main");
 const Detail = require("./models/Detail");
-
+const Slider = require("./models/slider");
 // app.get('/', (req,res)=>{
 
 //     res.send("this data from server this is second line of server response");
@@ -30,6 +30,29 @@ hbs.registerPartials("views/partials");
 //db connection
 mongoose.connect("mongodb://localhost/website_freelance", () => {
   console.log("db conected");
+
+
+// slider images
+
+// Slider.create([
+//   {
+//     title: "Learn java in very easy manner",
+//     sub_title:"Java is one of the most populer programming language now a day's.",
+//     image_url: "/static/images/img2.jpg"
+//   },
+//   {
+//     title: "Learn Node js in very easy manner",
+//     sub_title:"NodeJs is one of the most populer programming language now a day's.",
+//     image_url: "/static/images/img2.jpg"
+//   },
+//   {
+//     title: "Learn JavaScript in very easy manner",
+//     sub_title:"JavaScript is one of the most populer programming language now a day's.",
+//     image_url: "/static/images/img5.jpg"
+//   }
+// ]);
+
+
 
   // Detail.create({
   //   brandName: "Info Technical Solution",
