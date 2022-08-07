@@ -9,6 +9,7 @@ const app = express();
 const routes = require("./routes/main");
 const Detail = require("./models/Detail");
 const Slider = require("./models/slider");
+const Service = require("./models/Service")
 // app.get('/', (req,res)=>{
 
 //     res.send("this data from server this is second line of server response");
@@ -31,6 +32,23 @@ hbs.registerPartials("views/partials");
 mongoose.connect("mongodb://localhost/website_freelance", () => {
   console.log("db conected");
 
+  // Service code
+
+  // Service.create(
+  //   [
+  //     {
+  //       icon: "fa-brands fa-accusoft service_icon",
+  //       title: "Provide Best Courses",
+  //       description: "we provide best courcess that helps student in placement and learning coding. ",
+  //       linkText: "Check",
+  //       link: "Support"
+  //     }
+  //   ]
+  // );
+  // Service code end
+
+
+
 
 // slider images
 
@@ -39,6 +57,7 @@ mongoose.connect("mongodb://localhost/website_freelance", () => {
 //     title: "Learn java in very easy manner",
 //     sub_title:"Java is one of the most populer programming language now a day's.",
 //     image_url: "/static/images/img2.jpg"
+   
 //   },
 //   {
 //     title: "Learn Node js in very easy manner",

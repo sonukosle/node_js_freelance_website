@@ -4,6 +4,7 @@ const async = require("hbs/lib/async");
 const routes = express.Router();
 const Detail = require("../models/Detail");
 const slider = require("../models/slider");
+const Service= require("../models/Service")
 
 // first page route
 routes.get("/", async (req, res) => {
@@ -12,10 +13,12 @@ routes.get("/", async (req, res) => {
   const sliders=await slider.find();
   // console.log(details);
   // console.log(sliders);
+  const services=await Service.find();
   res.render("index",{
     // we are rendring here model js file data
     details: details,
-    sliders: sliders
+    sliders: sliders,
+    services: services
   },);
   
 });
