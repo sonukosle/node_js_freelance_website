@@ -2,3 +2,6 @@ npm init => to create project with nodejs
 packages => express,mongoose,body-parser,
 hbs=> basically we use hbs to templet engin , it use to send data in html.
 
+1. How to set db in nodejs project.
+2. How to serve staic file in nodejs project.
+3. How to set partial in nodejs project.
