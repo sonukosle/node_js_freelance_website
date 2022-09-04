@@ -10,6 +10,8 @@ const routes = require("./routes/main");
 const Detail = require("./models/Detail");
 const Slider = require("./models/slider");
 const Service = require("./models/Service")
+
+const bodyParser= require('body-parser')
 // app.get('/', (req,res)=>{
 
 //     res.send("this data from server this is second line of server response");
@@ -19,6 +21,11 @@ const Service = require("./models/Service")
 
 // we want to access static files - /static/css/style.css
 app.use("/static", express.static("public"));
+
+app.use(bodyParser.urlencoded({
+  extended:true
+}))
+
 app.use("", routes);
 
 //(template engine(hbs))

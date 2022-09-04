@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bootstrap demo</title>
+  <title>node js project</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
@@ -20,6 +20,25 @@
   {{>navbar data = details}}
 
   {{>slider sliders=sliders}}
+
+
+  {{!-- banner 1 --}}
+
+  <section class="banner1-section py-5 bg-dark text-white" id="background-1">
+    <div class="container text-center">
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Start learning new tecnology here !!!!</h1>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod culpa consequatur non. Esse, commodi sint,
+            veniam delectus minima optio autem ipsam quaerat deleniti rem quo facilis magni soluta quibusdam
+            consequuntur.
+          </p>
+          <button class="btn btn-outline-primary">Start learning</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   {{!-- services section --}}
   <section id="services_section">
@@ -46,28 +65,77 @@
   </section>
   {{!-- servicess section end --}}
 
+
+  {{!-- banner section2 --}}
+  <section class="banner_2 py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 text-center pt-5">
+          {{!-- left side --}}
+          <h3> We work for people , not for money</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat natus, ratione nemo aspernatur atque
+            numquam? Similique maxime illo dolor iure nemo impedit quas hic asperiores ratione doloribus, cum non?<56>
+            </56>
+          </p>
+          <button class="btn btn-primary">Click Here</button>
+        </div>
+        <div class="col-md-6 py-2">
+          {{!-- right side --}}
+          <img src="/static/images/banner-2.gif" alt="img" style="height:350px" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- banner section2 end --}}
+
+  {{!-- banner3 section --}}
+   <section class="banner_2 py-5">
+    <div class="container">
+      <div class="row">
+         <div class="col-md-6 py-2">
+          {{!-- left side --}}
+          <img src="/static/images/lotie1.gif" alt="img" style="height:350px" class="img-fluid">
+        </div>
+        <div class="col-md-6 text-center pt-5">
+          {{!-- right side --}}
+          <h3> We work for people , not for money</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A quaerat natus, ratione nemo aspernatur atque
+            numquam? Similique maxime illo dolor iure nemo impedit quas hic asperiores ratione doloribus, cum non?<56>
+            </56>
+          </p>
+          <button class="btn btn-primary">Click Here</button>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+  {{!-- banner3 section --}}
+
   {{!-- contact us section --}}
 
   <section id="contact_us_section" class="bg-dark text-white">
     <div class="container">
-      <h3 class="text-center text-secondary">Contact Us</h3>
+      <h3 class="text-center text-secondary mt-2">Contact Us</h3>
       <div class="row">
         <div class="col-md-12">
 
-          <form>
+          <form action="process-contact-from" method="post">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email Address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
 
+
             <div class="mb-3">
               <label for="contact_number" class="form-label">Your contact number</label>
-              <input type="number" class="form-control" id="contact_number" name="contact">
+              <input name="phone" type="number" class="form-control" id="contact_number" name="contact">
             </div>
 
             <div class="form-floating my-2 text-dark">
-              <textarea style="height:150px" class="form-control" placeholder="Enter your query here" id="queryField"></textarea>
+              <textarea name="query" style="height:150px" class="form-control" placeholder="Enter your query here"
+                id="queryField"></textarea>
               <label for="queryField">Query here</label>
             </div>
 
